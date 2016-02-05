@@ -83,7 +83,7 @@ class SparseLabelWeights : public LabelWeights {
         return;
       }
     }
-    label_weights_.push_back(std::make_pair<int,double>(label, weight));
+    label_weights_.push_back(std::make_pair(label, weight));
   }
   void AddWeight(int label, double weight) {
     for (int k = 0; k < label_weights_.size(); ++k) {
@@ -92,7 +92,7 @@ class SparseLabelWeights : public LabelWeights {
         return;
       }
     }
-    label_weights_.push_back(std::make_pair<int, double>(label, weight));
+    label_weights_.push_back(std::make_pair(label, weight));
   }
 
   void GetLabelWeightByPosition(int position, int *label,
