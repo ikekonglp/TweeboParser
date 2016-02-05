@@ -1,0 +1,11 @@
+Accuracy:
+-------------
+Without brown cluster features: 98.8%
+With: 98.6%
+
+python pipeline.py test weights
+
+
+weights can be obtained by running
+
+python perceptron.py train > weights
