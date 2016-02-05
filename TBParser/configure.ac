@@ -15,7 +15,7 @@ AC_PROG_CC
 AUX_LIBS=../../deps/local/lib
 AUX_INCLUDES=../../deps/local/include
 LFLAGS="-L${AUX_LIBS} -lad3 -lgflags -lglog"
-CPPFLAGS="-I${AUX_INCLUDES} -I${INCLUDES}/ad3"
+CPPFLAGS="-std=c++11 -I${AUX_INCLUDES} -I${INCLUDES}/ad3"
 AC_SUBST(LFLAGS)
 AC_SUBST(CPPFLAGS)
 
