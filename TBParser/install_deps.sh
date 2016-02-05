@@ -20,8 +20,9 @@ echo "Installing gflags..."
 rm -rf gflags
 git clone https://github.com/gflags/gflags.git
 cd gflags
+git checkout -b release
 mkdir build && cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=${LOCAL_DEPS_DIR}
+cmake .. -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=${LOCAL_DEPS_DIR}
 make -j 2
 make install
 cd ..
@@ -34,6 +35,7 @@ echo "Installing glog..."
 rm -rf glog
 git clone https://github.com/google/glog.git
 cd glog
+git checkout 0b0b022be1c9c9139955af578fe477529d4b7b3c
 if ${RUN_AUTOTOOLS}
 then
     rm missing
