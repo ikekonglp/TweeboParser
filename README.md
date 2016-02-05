@@ -58,7 +58,13 @@ Corresponding CoNLL format representation of the dependency tree above:
 
 ##Compiling
 
-To compile the code, first unzip/tar the downloaded file:
+```
+Note: You will need the latest GCC, cmake, Java, Python to install and run this software.
+If you get into any problem, please send an email to lingpenk@cs.cmu.edu
+with the log from the command "./install.sh" and "./run.sh sample_input.txt" so that we can help.
+```
+
+To compile the code, git clone the repository first 
 
 ```
 > git clone https://github.com/ikekonglp/TweeboParser.git
