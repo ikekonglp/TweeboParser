@@ -1,0 +1,6 @@
+cd deps/AD3-2.0.2/
+make
+cd ..
+cd ..
+cp deps/AD3-2.0.2/ad3/libad3.a deps/local/lib/
+make clean && make && make install
