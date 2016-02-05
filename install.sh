@@ -22,7 +22,8 @@
 ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PARSER_DIR="${ROOT_DIR}/TBParser"
 
-wget http://www.cs.cmu.edu/~ark/TweetNLP/pretrained_models.tar.gz
+rm pretrained_models.tar.gz
+curl "http://www.cs.cmu.edu/~ark/TweetNLP/pretrained_models.tar.gz" -o "pretrained_models.tar.gz"
 tar xvf pretrained_models.tar.gz
 
 cd ${PARSER_DIR}
