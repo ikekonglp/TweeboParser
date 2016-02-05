@@ -22,6 +22,9 @@
 ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PARSER_DIR="${ROOT_DIR}/TBParser"
 
+wget http://www.cs.cmu.edu/~ark/TweetNLP/pretrained_models.tar.gz
+tar xvf pretrained_models.tar.gz
+
 cd ${PARSER_DIR}
 chmod +x install-sh
 ./install_deps.sh
