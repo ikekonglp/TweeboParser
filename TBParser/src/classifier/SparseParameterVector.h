@@ -35,7 +35,7 @@ template<typename Real>
 #ifdef USE_CUSTOMIZED_HASH_TABLE
 class MapUINT64 : public HashTable<uint64_t, Real> {
 #else
-class MapUINT64 : public std::tr1::unordered_map<uint64_t, Real> {
+class MapUINT64 : public std::unordered_map<uint64_t, Real> {
 #endif
  public:
   MapUINT64() {

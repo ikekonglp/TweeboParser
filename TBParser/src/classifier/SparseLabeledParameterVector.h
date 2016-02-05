@@ -168,7 +168,7 @@ class DenseLabelWeights : public LabelWeights {
 #ifdef USE_CUSTOMIZED_HASH_TABLE
 typedef HashTable<uint64_t, LabelWeights*> LabeledParameterMap;
 #else
-typedef std::tr1::unordered_map <uint64_t, LabelWeights*> LabeledParameterMap;
+typedef std::unordered_map <uint64_t, LabelWeights*> LabeledParameterMap;
 #endif
 
 // This class implements a sparse parameter vector, which contains weights for
