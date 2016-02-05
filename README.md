@@ -1,4 +1,8 @@
-#TweeboParser and Tweebank
+##NEWS
+```
+Feb 5, 2016 -- Changing to c++11, we support both Ubuntu and MacOS now!
+```
+##TweeboParser and Tweebank
 
 We provide a dependency parser for English tweets, TweeboParser . The parser is trained on a subset of a new labeled corpus for 929 tweets (12,318 tokens) drawn from the POS-tagged tweet corpus of Owoputi et al. (2013) , Tweebank .
 
@@ -57,8 +61,8 @@ Corresponding CoNLL format representation of the dependency tree above:
 To compile the code, first unzip/tar the downloaded file:
 
 ```
-> tar -zxvf TweeboParser-1.0.tar.gz
-> cd TweeboParser-1.0
+> git clone https://github.com/ikekonglp/TweeboParser.git
+> cd TweeboParser
 ```
 
 Next, run the following command
@@ -67,7 +71,7 @@ Next, run the following command
 > ./install.sh
 ```
 
-This will install TweeboParser and all its dependencies.
+This will install TweeboParser and all its dependencies. Also, it will download the pretrained models for you. They are stored at http://www.cs.cmu.edu/~ark/TweetNLP/pretrained_models.tar.gz
 
 ##Example of usage
 
