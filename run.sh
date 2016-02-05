@@ -36,6 +36,8 @@ if [ "$#" -ne 1 ]; then
     echo "Usage: ./run.sh [path_to_raw_input_file_one_sentence_a_line]"
 else
 
+mkdir -p working_dir
+
 # Starting point:
 # -- Raw text tweets, one line per tweet.
 INPUT_FILE=$1
@@ -62,10 +64,10 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:`pwd;`/deps/local/lib:"
 rm -f -r ${WORKING_DIR}/test_score
 mkdir ${WORKING_DIR}/test_score
 
-./TurboParser --test --file_model=${MODEL_DIR}/ptb_parsing_model --file_test=${WORKING_DIR}/test --file_prediction=${WORKING_DIR}/ptb_single_predict_test --output_posterior=true --use_posterior=false --posterior_dir=${WORKING_DIR}/test_score --logtostderr
+./TurboParser --test --file_model=${MODEL_DIR}/ptb_parsing_model --file_test=${WORKING_DIR}/test --file_prediction=${WORKING_DIR}/ptb_single_predict_test --output_posterior=true --use_posterior=false --posterior_dir=${WORKING_DIR}/test_score
 
 # --> Parse the second time using PTB score as features to get the final results
-./TurboParser --test --file_model=${MODEL_DIR}/parsing_model --file_test=${WORKING_DIR}/test --file_prediction=${WORKING_DIR}/test_predict --output_posterior=false --use_posterior=true --posterior_dir=${WORKING_DIR}/test_score --logtostderr
+./TurboParser --test --file_model=${MODEL_DIR}/parsing_model --file_test=${WORKING_DIR}/test --file_prediction=${WORKING_DIR}/test_predict --output_posterior=false --use_posterior=true --posterior_dir=${WORKING_DIR}/test_score
 
 # -- Output the results.
 cd ${ROOT_DIR}

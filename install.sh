@@ -23,7 +23,7 @@ ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PARSER_DIR="${ROOT_DIR}/TBParser"
 
 cd ${PARSER_DIR}
-
+chmod +x install-sh
 ./install_deps.sh
 ./configure && make && make install
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:`pwd;`/deps/local/lib:"

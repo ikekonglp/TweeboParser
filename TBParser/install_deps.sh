@@ -17,22 +17,21 @@ RUN_AUTOTOOLS=false
 # Install gflags.
 echo ""
 echo "Installing gflags..."
-tar -zxf gflags-2.0-no-svn-files.tar.gz
-cd gflags-2.0
-if ${RUN_AUTOTOOLS}
-then
-    rm missing
-    aclocal
-    autoconf
-    automake --add-missing
-fi
-./configure --prefix=${LOCAL_DEPS_DIR} && make && make install
+rm -rf gflags
+git clone https://github.com/gflags/gflags.git
+cd gflags
+mkdir build && cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=${LOCAL_DEPS_DIR}
+make -j 2
+make install
+cd ..
 cd ..
 echo "Done."
 
 # Install glog.
 echo ""
 echo "Installing glog..."
+rm -rf glog
 git clone https://github.com/google/glog.git
 cd glog
 if ${RUN_AUTOTOOLS}
