@@ -21,7 +21,8 @@ rm -rf gflags
 git clone https://github.com/gflags/gflags.git
 cd gflags
 git checkout -b release
-mkdir build && cd build
+mkdir -p build
+cd build
 cmake .. -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=${LOCAL_DEPS_DIR}
 make -j 2
 make install
