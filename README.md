@@ -1,6 +1,7 @@
 ##NEWS
 ```
-April 1, 2016 -- We support both Python2 and Python3 now! Big thanks to Nikhil Kini (https://nikhilnkini.wordpress.com/) who figured this out!
+April 1, 2016 -- We support both Python2 and Python3 now! 
+                 Big thanks to Nikhil Kini (https://nikhilnkini.wordpress.com/) who figured this out!
 Feb 5, 2016 -- Changing to c++11, we support both Ubuntu and MacOS now!
 ```
 ##TweeboParser and Tweebank
