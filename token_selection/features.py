@@ -119,6 +119,6 @@ def get_all(trainfile):
 
 if __name__ == "__main__":
     sentset, labelset, postagseqs, vecs1, vecs2, all_feats = get_all(sys.argv[1])
-    print sentset[25]
-    print labelset[25]
-    print len(all_feats)
+    print(sentset[25])
+    print(labelset[25])
+    print(len(all_feats))

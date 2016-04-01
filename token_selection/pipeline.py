@@ -30,7 +30,7 @@ def print_line_withmodification(cline, tag):
     for i in xrange(0,13):
         s += (cline[i] + "\t")
     s += tag
-    print s
+    print(s)
 
 
 def main(testfile, featsfile):
