@@ -31,11 +31,11 @@ import sys
 import codecs
 
 def usage():
-    print "Usage: AugumentBrownClusteringFeature.py [Brown_Clustering_Dictionary] " \
-          "[Input_Conll_File] [Y/N(case-sensitive)] > [Output_file]"
-    print "Example: AugumentBrownClusteringFeature.py paths input.txt > output.txt"
-    print "The program will add two kind of Strings at the end, the first one is the first 4 " \
-          "bit of the Brown Cluster label and the second one is the whole Brown Cluster label."
+    print("Usage: AugumentBrownClusteringFeature.py [Brown_Clustering_Dictionary] " \
+          "[Input_Conll_File] [Y/N(case-sensitive)] > [Output_file]")
+    print("Example: AugumentBrownClusteringFeature.py paths input.txt > output.txt")
+    print("The program will add two kind of Strings at the end, the first one is the first 4 " \
+          "bit of the Brown Cluster label and the second one is the whole Brown Cluster label.")
 
 
 if __name__ == "__main__":
@@ -63,7 +63,7 @@ if __name__ == "__main__":
             sys.stdout.write("\n")
             continue
         cvlist = line.split("\t")
-	if sys.argv[3] == "N":
+        if sys.argv[3] == "N":
             brown = brown_dict.get(cvlist[1].lower().strip(), 'OOV')
         else:
             brown = brown_dict.get(cvlist[1].strip(), 'OOV')
@@ -76,4 +76,4 @@ if __name__ == "__main__":
         for ele in cvlist:
             tline = tline + ele + "\t"
         tline = tline[:len(tline) - 1]
-        print tline
+        print(tline)

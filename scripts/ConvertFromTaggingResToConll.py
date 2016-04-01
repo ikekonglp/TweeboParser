@@ -21,6 +21,7 @@ import codecs
 import os
 import re
 import sys
+import io
 
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('inputf', type=str, metavar='', help='')
@@ -46,12 +47,12 @@ def read_corpus(filename):
 
 def print_sentence(sentence, outputf):
     for line in sentence:
-        s = u""
+        s = u""                 #unicode for Python2
         for field in line:
-            s += field + u"\t"
-        s = s.strip()
-        outputf.write(s+u"\n")
-    outputf.write(u"\n")
+            s += field + "\t"   #Python2: unicode + str return unicode
+        s = s.strip()           #Python2: Still unicode
+        outputf.write(s+"\n")   #Python2: Still unicode
+    outputf.write("\n")
     return
 
 def convert_sentence(sen):
@@ -66,7 +67,8 @@ def convert_sentence(sen):
     return new_sen 
 
 if __name__ == '__main__':
-    sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
+    #sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
+    sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='UTF-8', line_buffering=True)   #Ref: https://wiki.python.org/moin/PortingToPy3k/BilingualQuickRef#codecs
     corpus = read_corpus(A.inputf)
 
     conll_format_corpus = []
