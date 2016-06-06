@@ -26,6 +26,7 @@ read -p "Have you downloaded pretrained models? If this your first time installi
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
+else
 rm pretrained_models.tar.gz
 curl "http://www.cs.cmu.edu/~ark/TweetNLP/pretrained_models.tar.gz" -o "pretrained_models.tar.gz"
 tar xvf pretrained_models.tar.gz
