@@ -24,8 +24,8 @@ PARSER_DIR="${ROOT_DIR}/TBParser"
 
 read -p "Have you downloaded pretrained models? If this your first time installing TweeboParser, please enter no for this. If you have downloaded the pretrained models PROPERLY, and you want to skip this step to save time, please enter yes. If you are not sure what to do, please enter no. [y/n]: " -n 1 -r
 echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+echo "Skip the download of pretrained models."
 else
 rm pretrained_models.tar.gz
 curl "http://www.cs.cmu.edu/~ark/TweetNLP/pretrained_models.tar.gz" -o "pretrained_models.tar.gz"
