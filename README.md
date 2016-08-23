@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ikekonglp/TweeboParser.svg?branch=master)](https://travis-ci.org/ikekonglp/TweeboParser)
+
 ##NEWS
 ```
 June 5, 2016 -- You can skip the download of the pretrained models if you have done that properly.
