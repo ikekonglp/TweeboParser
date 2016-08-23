@@ -1,4 +1,4 @@
-Build status for Linux and Mac [![Build Status](https://travis-ci.org/ikekonglp/TweeboParser.svg?branch=master)](https://travis-ci.org/ikekonglp/TweeboParser)
+Build status for Linux and Mac: [![Build Status](https://travis-ci.org/ikekonglp/TweeboParser.svg?branch=master)](https://travis-ci.org/ikekonglp/TweeboParser)
 
 ( If that's green and you still can't compile it succussfully, please first make sure you get the lastest gcc and cmake installed and running properly. :) )
 
