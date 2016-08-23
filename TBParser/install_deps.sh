@@ -20,7 +20,7 @@ echo "Installing gflags..."
 rm -rf gflags
 git clone https://github.com/gflags/gflags.git
 cd gflags
-git checkout -b release
+# git checkout -b release
 mkdir -p build_gf
 cd build_gf
 cmake .. -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=${LOCAL_DEPS_DIR}
