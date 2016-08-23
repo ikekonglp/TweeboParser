@@ -4,9 +4,19 @@ language: cpp
 compiler:
   - gcc
 
+addons:
+  apt:
+    sources:
+    # add PPAs with more up-to-date toolchains
+    - ppa:smspillaz/cmake-2.8.12
+    packages:
+    # install toolchains
+    - cmake
+
 os:
   - linux
   - osx
+  
     
 script:
   - cd TBParser
