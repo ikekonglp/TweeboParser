@@ -1,7 +1,10 @@
 [![Build Status](https://travis-ci.org/ikekonglp/TweeboParser.svg?branch=master)](https://travis-ci.org/ikekonglp/TweeboParser)
+( If that's green and you still can't compile it succussfully, please first make sure you get the lastest gcc and cmake installed and running properly. :) )
 
 ##NEWS
 ```
+Aug 23, 2016 -- We add Travis CI to the project (on Linux and osx) -- check the Build Status on
+                top of this page. 
 June 5, 2016 -- You can skip the download of the pretrained models if you have done that properly.
 April 1, 2016 -- We support both Python2 and Python3 now! 
                  Big thanks to Nikhil Kini (https://nikhilnkini.wordpress.com/) who figured this out!
