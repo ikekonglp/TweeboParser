@@ -36,10 +36,10 @@ echo "Installing glog..."
 rm -rf glog
 git clone https://github.com/google/glog.git
 cd glog
-if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+#if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     # Do something under GNU/Linux platform
-    git checkout 0b0b022be1c9c9139955af578fe477529d4b7b3c
-fi
+git checkout 0b0b022be1c9c9139955af578fe477529d4b7b3c
+#fi
 if ${RUN_AUTOTOOLS}
 then
     rm missing
