@@ -85,7 +85,7 @@ def execute(sentence, labelset, postags, vecs1, vecs2, weights):
         if score > max_score:
             max_score = score
             best_last_label = w
-            best_feat = feats
+            best_feat = ''
     tags.append(best_last_label)
     features.extend(best_feat)
 
