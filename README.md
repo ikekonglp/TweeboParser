@@ -69,7 +69,7 @@ Corresponding CoNLL format representation of the dependency tree above:
 
 ```
 Note: You will need the latest GCC, cmake, Java, Python to install and run this software.
-If you get into any problem, please send an email to lingpenk@cs.cmu.edu
+If you get into any problem, please send an email to lingpenk@google.com
 with the log from the command "./install.sh" and "./run.sh sample_input.txt" so that we can help.
 ```
 
